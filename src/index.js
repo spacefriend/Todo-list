@@ -4,18 +4,18 @@ import { Project } from "./project.js";
 import { TodoList} from "./todo.js";
 import './style.css';
 import Logo from './img/logo.png';
-import { initialLoad, addProject } from "./UI.js";
+import { initialLoad, addProjectUI, displayProject } from "./UI.js";
 
 initialLoad();
 
 //const header = document.getElementById('header');
-const sidebar = document.getElementById('sidebar');
-const content = document.getElementById('content');
+//const sidebar = document.getElementById('sidebar');
+//const content = document.getElementById('content');
 
 /*
 const defaultProjectBtn = document.createElement('button');
 const showAllBtn = document.createElement('button');
-*/
+
 const listCard = document.createElement('div');
 listCard.className = "card";
 /*
@@ -33,38 +33,34 @@ logo.src = Logo;
 header.appendChild(logo);
 header.appendChild(defaultProjectBtn);
 header.appendChild(showAllBtn);
-*/
+
 content.appendChild(listCard);
+*/
+addProjectUI('testingtesting');
 
-addProject('testingtesting');
 
 
 
-/*
-console.log('test');
+
 let grocery = new Project('Grocery List');
 let breakfast = new TodoList('Breakfast');
 let test = new TodoList('test');
 let cereal = new Task('cheerios', 'Buy Cheerios cereal', 'Today', 'High', false);
-console.log(cereal.getDescription());
+
 let milk = new Task('milk', 'Buy Milk', 'Today', 'High', false);
 
 breakfast.addTask(cereal);
 breakfast.addTask(milk);
 
-console.log(breakfast.getTasks());
+
 grocery.addList(breakfast);
 grocery.addList(test);
 
-console.log(grocery.getLists());
-
-grocery.deleteList(test);
 
 
-console.log(grocery.getLists());
+displayProject(grocery);
 
 
 //let testName = test.getName();
 //console.log(testName);
 //console.log('test2');
-*/

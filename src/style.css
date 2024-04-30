@@ -63,6 +63,12 @@ body{
     
 
 }
+/*******************************************************************/
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./Roboto/Roboto-Regular.ttf') format('truetype');
+}
 
 
 
@@ -93,19 +99,15 @@ body{
     grid-row: 2 / 3;
     background-color: var(--sidebar-color);
     
-
-}
-
-.content{
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-    background-color: var(--bg-color);
-    padding: 35px;
-    display: flex;
     
+
 }
 
-.project-tab{
+.sidebar-btn{
+
+}
+
+.sidebar-btn, .project-tab{
 
     display: inline-block;
     outline: 0;
@@ -117,7 +119,6 @@ body{
     position: relative;
     padding: 10px;
     background: var(--bg-color);
-    background-image: linear-gradient(122deg, var(--bg-color), #c7bfa5);
     background-size: 300px,300px,100%;
     color: #fff;
     border-bottom: 5px solid var(--card-color);
@@ -127,8 +128,22 @@ body{
     :hover{
         box-shadow: 0 0 3px 3px rgb(0 0 0 / 8%);
     }
-    order: 2;
+
+}
+
+.content{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-color: var(--bg-color);
+    padding: 35px;
+    display: flex;
+    gap: 12px;
     
+}
+
+.project-tab{
+    background-image: linear-gradient(122deg, var(--bg-color), #c7bfa5);
+    order: 2; 
 }
 
 .project-tab #show-all{
@@ -139,4 +154,24 @@ body{
     width: min(200px);
     height: min(200px);
     background-color: var(--card-color);
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: repeat(7, 1fr);
+    align-items: center;
+    gap: 3px;
+    
+
+}
+
+.list-checklist{
+    font-family: 'Roboto';
+    text-transform: lowercase;
+
+}
+
+.list-title{
+    font-family: 'Roboto';
+    padding: 5px;
+    text-transform: uppercase;
+    grid-column: 1 / 3;
 }
