@@ -3,6 +3,7 @@ class Project {
     constructor(name) {
         this.name = name;
         this.lists = [];
+        this.activeStatus = false;
 
     }
 
@@ -29,6 +30,12 @@ class Project {
     }
     deleteList(list){
         this.lists = this.lists.filter((listName) => listName !== list);
+    }
+    getActiveStatus(){
+        return this.activeStatus;
+    }
+    setActiveStatus(status){
+        this.activeStatus = status;
     }
 }
 export { Project }

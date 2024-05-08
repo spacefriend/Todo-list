@@ -36,13 +36,11 @@ header.appendChild(showAllBtn);
 
 content.appendChild(listCard);
 */
-addProjectUI('testingtesting');
 
 
-
-
-
+/*
 let grocery = new Project('Grocery List');
+addProjectUI(grocery);
 let breakfast = new TodoList('Breakfast');
 let test = new TodoList('test');
 let cereal = new Task('cheerios', 'Buy Cheerios cereal', 'Today', 'High', false);
@@ -60,6 +58,17 @@ grocery.addList(test);
 
 displayProject(grocery);
 
+let cleaning = new Project('Cleaning');
+addProjectUI(cleaning);
+let bathroom = new TodoList('Bathroom');
+let toilet = new Task('clean toilet', 'Clean the toilet', 'Today', 'High', false);
+let floor = new Task('clean floor', 'Mop and sweep bathroom floor', 'High', false);
+
+bathroom.addTask(toilet);
+bathroom.addTask(floor);
+
+cleaning.addList(bathroom);
+*/
 
 //let testName = test.getName();
 //console.log(testName);
